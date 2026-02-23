@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clovis | Especialista em Automação n8n & IA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Clovis | Currículo Profissional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* === VARIÁVEIS DE COR E ESTILO === */
+        /* === VARIÁVEIS DE COR === */
         :root {
-            --bg-color: #050505;
-            --surface-color: #121212;
-            --surface-hover: #1a1a1a;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --neon-blue: #00f3ff;
-            --neon-blue-glow: rgba(0, 243, 255, 0.4);
-            --font-tech: 'Space Grotesk', sans-serif;
-            --font-body: 'Inter', sans-serif;
+            --orange: #FF6B00; /* Laranja vibrante */
+            --orange-hover: #e65c00;
+            --black: #111111;
+            --black-light: #1a1a1a;
+            --white: #FFFFFF;
+            --gray-light: #F4F4F4;
+            --text-dark: #333333;
+            --text-muted: #777777;
+            --text-light: #E0E0E0;
+            --font-main: 'Poppins', sans-serif;
         }
 
         /* === RESET E BASES === */
@@ -28,16 +29,16 @@
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--font-body);
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            background-color: var(--gray-light);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
         h1, h2, h3, h4 {
-            font-family: var(--font-tech);
             font-weight: 700;
+            line-height: 1.2;
         }
 
         a {
@@ -45,36 +46,84 @@
             color: inherit;
         }
 
+        /* === COMPONENTES === */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--orange);
+            color: var(--white);
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--orange);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--orange);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--black);
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60px;
+            height: 4px;
+            background-color: var(--orange);
+        }
+
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         /* === NAVBAR === */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(5, 5, 5, 0.8);
-            backdrop-filter: blur(10px);
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             z-index: 1000;
-            border-bottom: 1px solid rgba(0, 243, 255, 0.1);
         }
 
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-family: var(--font-tech);
             font-size: 1.5rem;
-            color: var(--text-main);
-            letter-spacing: 1px;
+            font-weight: 800;
+            color: var(--black);
+            text-transform: uppercase;
+            letter-spacing: -1px;
         }
 
         .logo span {
-            color: var(--neon-blue);
-            text-shadow: 0 0 10px var(--neon-blue-glow);
+            color: var(--orange);
         }
 
         .nav-links {
@@ -83,111 +132,53 @@
         }
 
         .nav-links a {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--black);
             transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--neon-blue);
-            text-shadow: 0 0 8px var(--neon-blue-glow);
+            color: var(--orange);
         }
 
         /* === HERO SECTION === */
         .hero {
             height: 100vh;
+            background-color: var(--black);
+            color: var(--white);
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 2rem;
             position: relative;
+            padding-top: 80px; /* offset para a navbar */
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40vw;
-            height: 40vw;
-            background: radial-gradient(circle, var(--neon-blue-glow) 0%, transparent 60%);
-            opacity: 0.3;
-            z-index: -1;
-            border-radius: 50%;
-            filter: blur(60px);
+        .hero-content {
+            max-width: 800px;
         }
 
         .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.1;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
         }
 
-        .hero h1 .highlight {
-            color: transparent;
-            -webkit-text-stroke: 1px var(--neon-blue);
-            text-shadow: 0 0 20px var(--neon-blue-glow);
+        .hero h1 span {
+            color: var(--orange);
         }
 
         .hero p {
             font-size: 1.2rem;
-            color: var(--text-muted);
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
             max-width: 600px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            font-family: var(--font-tech);
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--bg-color);
-            background: var(--neon-blue);
-            border: 1px solid var(--neon-blue);
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px var(--neon-blue-glow);
-            font-weight: 600;
-        }
-
-        .btn:hover {
-            background: transparent;
-            color: var(--neon-blue);
-            box-shadow: 0 0 30px var(--neon-blue-glow) inset, 0 0 20px var(--neon-blue-glow);
-        }
-
-        /* === SECTIONS COMMONS === */
-        section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50%;
-            height: 3px;
-            background: var(--neon-blue);
-            box-shadow: 0 0 10px var(--neon-blue-glow);
         }
 
         /* === SOBRE MIM === */
+        .about-section {
+            background-color: var(--white);
+        }
+
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -196,247 +187,233 @@
         }
 
         .about-text p {
-            margin-bottom: 1.5rem;
             font-size: 1.1rem;
             color: var(--text-muted);
+            margin-bottom: 1.5rem;
         }
 
-        .about-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .stat-box {
-            background: var(--surface-color);
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .stat-box:hover {
-            transform: translateY(-5px);
-            border-color: var(--neon-blue);
-            box-shadow: 0 5px 20px var(--neon-blue-glow);
-        }
-
-        .stat-box h3 {
-            font-size: 2.5rem;
-            color: var(--neon-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        /* === GALERIA DE PROJETOS === */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--surface-color);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            border-color: var(--neon-blue);
-            box-shadow: 0 0 25px var(--neon-blue-glow);
-        }
-
-        .project-img {
+        .about-image {
+            background-color: var(--black);
             width: 100%;
-            height: 200px;
-            background: #1a1a24;
+            height: 400px;
+            border-radius: 8px;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #4a4a5a;
-            font-family: var(--font-tech);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            /* Aqui entrará o print do workflow via CSS background ou tag img */
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 200"><rect width="400" height="200" fill="%231a1a24"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="monospace" font-size="14" fill="%234a4a5a">Print do Workflow n8n aqui</text></svg>');
-            background-size: cover;
-            background-position: center;
+            color: var(--white);
         }
 
-        .project-info {
-            padding: 1.5rem;
+        .about-image::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border: 4px solid var(--orange);
+            border-radius: 8px;
+            z-index: -1;
         }
 
-        .project-info h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+        /* === PROJETOS === */
+        .projects-section {
+            background-color: var(--gray-light);
         }
 
-        .project-info p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--orange);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: var(--black-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--orange);
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .card-body h3 {
+            color: var(--black);
             margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .card-body p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
         }
 
         .tags {
             display: flex;
             gap: 0.5rem;
+            flex-wrap: wrap;
         }
 
         .tag {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.5rem;
-            background: rgba(0, 243, 255, 0.1);
-            color: var(--neon-blue);
-            border-radius: 4px;
-            border: 1px solid rgba(0, 243, 255, 0.2);
+            background-color: var(--black);
+            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
         }
 
-        /* === LINHA DO TEMPO (EXPERIÊNCIA) === */
+        /* === EXPERIÊNCIA === */
+        .experience-section {
+            background-color: var(--white);
+        }
+
         .timeline {
             position: relative;
             max-width: 800px;
-            margin: 0 auto;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
+            left: 0;
             top: 0;
-            left: 20px;
-            height: 100%;
             width: 2px;
-            background: rgba(255, 255, 255, 0.1);
+            height: 100%;
+            background-color: var(--gray-light);
         }
 
         .timeline-item {
             position: relative;
-            padding-left: 60px;
+            padding-left: 40px;
             margin-bottom: 3rem;
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: 14px;
+            left: -8px;
             top: 5px;
-            width: 14px;
-            height: 14px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
-            background: var(--bg-color);
-            border: 2px solid var(--neon-blue);
-            box-shadow: 0 0 10px var(--neon-blue-glow);
+            background-color: var(--orange);
+            border: 4px solid var(--white);
         }
 
         .timeline-date {
-            font-family: var(--font-tech);
-            color: var(--neon-blue);
-            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--orange);
             margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .timeline-content {
-            background: var(--surface-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: inline-block;
         }
 
         .timeline-content h3 {
+            color: var(--black);
             margin-bottom: 0.5rem;
         }
 
         .timeline-content p {
             color: var(--text-muted);
-            font-size: 0.95rem;
         }
 
-        /* === CONTATO (WEBHOOK FORM) === */
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--surface-color);
-            padding: 3rem;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
+        /* === CONTATO === */
+        .contact-section {
+            background-color: var(--black);
+            color: var(--white);
         }
 
-        .contact-container::after {
-            content: '';
-            position: absolute;
-            top: -1px; left: -1px; right: -1px; bottom: -1px;
-            border-radius: 8px;
-            background: linear-gradient(45deg, var(--neon-blue), transparent);
-            z-index: -1;
-            opacity: 0.2;
+        .contact-section .section-title {
+            color: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--orange);
+        }
+
+        .contact-info p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
 
         .form-group {
             margin-bottom: 1.5rem;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-family: var(--font-tech);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
         .form-control {
             width: 100%;
             padding: 1rem;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-main);
+            background-color: var(--black-light);
+            border: 1px solid #333;
+            color: var(--white);
             border-radius: 4px;
-            font-family: var(--font-body);
-            transition: all 0.3s ease;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
         }
 
         .form-control:focus {
             outline: none;
-            border-color: var(--neon-blue);
-            box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+            border-color: var(--orange);
         }
 
         textarea.form-control {
+            min-height: 150px;
             resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            text-align: center;
         }
 
         /* === FOOTER === */
         footer {
+            background-color: var(--black);
+            color: var(--text-muted);
             text-align: center;
             padding: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            border-top: 1px solid #222;
         }
 
-        /* === RESPONSIVIDADE === */
+        /* === RESPONSIVO === */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-            .about-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; } /* Em um site real, adicione menu hamburguer */
+            .hero h1 { font-size: 2.8rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; } /* Adicionar menu mobile futuramente */
             section { padding: 4rem 1rem; }
-            .contact-container { padding: 1.5rem; }
+            .about-image { margin-top: 2rem; height: 300px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
+    <!-- NAVBAR -->
     <header>
         <div class="nav-container">
-            <div class="logo">CLOVIS<span>.</span>AI</div>
+            <div class="logo">Clovis<span>.</span></div>
             <nav class="nav-links">
                 <a href="#sobre">Sobre Mim</a>
                 <a href="#projetos">Projetos</a>
@@ -446,199 +423,164 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section class="hero" id="home">
-        <div>
-            <h1>Transformando caos em <span class="highlight">Eficiência</span></h1>
-            <p>Especialista em Automação n8n e Inteligência Artificial. Eu construo sistemas invisíveis que geram resultados visíveis para o seu negócio.</p>
-            <a href="#projetos" class="btn">Ver Workflows em Ação</a>
+        <div class="container hero-content">
+            <h1>Soluções em <span>Automação</span> e Inteligência Artificial.</h1>
+            <p>Ajudando empresas a escalarem através de integrações inteligentes, eliminando tarefas manuais e otimizando processos com tecnologia de ponta.</p>
+            <a href="#projetos" class="btn">Ver meu trabalho</a>
         </div>
     </section>
 
     <!-- SOBRE MIM -->
-    <section id="sobre">
-        <h2 class="section-title">Sobre a Máquina</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Sou o Clovis, um arquiteto de soluções focado em resolver problemas complexos de TI através de automações inteligentes e integração de IA.</p>
-                <p>Minha missão é simples: eliminar o trabalho manual e repetitivo. Onde as pessoas veem gargalos operacionais e perda de tempo, eu vejo oportunidades para um workflow otimizado no n8n conectado a LLMs (Modelos de Linguagem).</p>
-                <p>Seja orquestrando APIs, processando dados em massa ou criando agentes de IA autônomos, meu foco é sempre a redução de custos e escalabilidade.</p>
-            </div>
-            <div class="about-stats">
-                <div class="stat-box">
-                    <h3>10k+</h3>
-                    <p>Horas Manuais Poupadas</p>
+    <section class="about-section" id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Olá, sou o Clovis. Sou um especialista apaixonado por transformar problemas complexos em processos simples, automatizados e escaláveis.</p>
+                    <p>Com forte background em TI e desenvolvimento, foco meu trabalho na integração de sistemas (APIs, n8n, Webhooks) e na implementação de fluxos com Inteligência Artificial (OpenAI, Claude) para trazer resultados reais.</p>
+                    <p>Meu objetivo é devolver o recurso mais valioso para você e sua equipe: <strong>o tempo</strong>.</p>
                 </div>
-                <div class="stat-box">
-                    <h3>50+</h3>
-                    <p>Workflows Ativos</p>
-                </div>
-                <div class="stat-box">
-                    <h3>100%</h3>
-                    <p>Foco em Solução</p>
-                </div>
-                <div class="stat-box">
-                    <h3>n8n</h3>
-                    <p>Mastery Level</p>
+                <div class="about-image">
+                    [Sua Foto de Perfil Aqui]
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROJETOS E WORKFLOWS -->
-    <section id="projetos">
-        <h2 class="section-title">Engenharia de Automação</h2>
-        <div class="projects-grid">
-            <!-- Projeto 1 -->
-            <div class="project-card">
-                <!-- Substitua o background pelo seu print no CSS ou adicione uma tag <img> aqui -->
-                <div class="project-img"></div>
-                <div class="project-info">
-                    <h3>Triagem Automática com IA</h3>
-                    <p>Workflow no n8n que lê e-mails do suporte, utiliza a API da OpenAI para categorizar urgência e encaminha para a equipe no Slack.</p>
-                    <div class="tags">
-                        <span class="tag">n8n</span>
-                        <span class="tag">OpenAI</span>
-                        <span class="tag">Slack API</span>
+    <!-- PROJETOS -->
+    <section class="projects-section" id="projetos">
+        <div class="container">
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div class="projects-grid">
+                
+                <div class="card">
+                    <div class="card-img">[Print do Workflow]</div>
+                    <div class="card-body">
+                        <h3>Triagem de Suporte com IA</h3>
+                        <p>Automação que analisa e-mails de clientes, identifica a urgência usando IA e direciona para o setor responsável via Slack.</p>
+                        <div class="tags">
+                            <span class="tag">n8n</span>
+                            <span class="tag">OpenAI</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Projeto 2 -->
-            <div class="project-card">
-                <div class="project-img"></div>
-                <div class="project-info">
-                    <h3>Pipeline de Lead Enrichment</h3>
-                    <p>Automação que captura leads de webhooks, raspa dados da web sobre a empresa e enriquece o CRM (HubSpot) de forma 100% autônoma.</p>
-                    <div class="tags">
-                        <span class="tag">Web Scraping</span>
-                        <span class="tag">n8n</span>
-                        <span class="tag">HubSpot</span>
+                <div class="card">
+                    <div class="card-img">[Print do Dashboard]</div>
+                    <div class="card-body">
+                        <h3>Enriquecimento de Leads</h3>
+                        <p>Sistema que captura contatos de landing pages, busca informações públicas da empresa e atualiza o CRM automaticamente.</p>
+                        <div class="tags">
+                            <span class="tag">HubSpot API</span>
+                            <span class="tag">Web Scraping</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Projeto 3 -->
-            <div class="project-card">
-                <div class="project-img"></div>
-                <div class="project-info">
-                    <h3>Agente de Cobrança via WhatsApp</h3>
-                    <p>Integração de ERP com a Evolution API + n8n para enviar lembretes personalizados de cobrança usando IA para gerar o tom da mensagem.</p>
-                    <div class="tags">
-                        <span class="tag">WhatsApp API</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">AI Prompting</span>
+                <div class="card">
+                    <div class="card-img">[Print da Integração]</div>
+                    <div class="card-body">
+                        <h3>Assistente de Vendas WhatsApp</h3>
+                        <p>Chatbot inteligente conectado ao banco de dados de produtos da empresa para responder dúvidas e gerar orçamentos.</p>
+                        <div class="tags">
+                            <span class="tag">WhatsApp API</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- EXPERIÊNCIA (LINHA DO TEMPO) -->
-    <section id="experiencia">
-        <h2 class="section-title">Log de Execução (Carreira)</h2>
-        <div class="timeline">
-            
-            <div class="timeline-item">
-                <span class="timeline-date">2022 - Presente</span>
-                <div class="timeline-content">
-                    <h3>Especialista em Automação & IA Independente</h3>
-                    <p>Consultoria e desenvolvimento de soluções sistêmicas para médias empresas. Implantação de instâncias próprias do n8n (Self-hosted via Docker), criação de integrações complexas e treinamento de IAs personalizadas para processos internos.</p>
+    <!-- EXPERIÊNCIA -->
+    <section class="experience-section" id="experiencia">
+        <div class="container">
+            <h2 class="section-title">Trajetória</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <span class="timeline-date">2022 - Atual</span>
+                    <div class="timeline-content">
+                        <h3>Consultor em Automação e IA</h3>
+                        <p>Atuando de forma independente, planejando e executando infraestruturas de automação para médias empresas. Redução média de 40% no tempo operacional dos clientes.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="timeline-item">
-                <span class="timeline-date">2019 - 2022</span>
-                <div class="timeline-content">
-                    <h3>Analista Sênior de Sistemas / TI</h3>
-                    <p>Responsável pela estabilidade da infraestrutura e pela integração de sistemas legados. Início da transição da cultura da empresa para processos automatizados, reduzindo em 40% o tempo de fechamento de relatórios.</p>
+                <div class="timeline-item">
+                    <span class="timeline-date">2019 - 2022</span>
+                    <div class="timeline-content">
+                        <h3>Analista de Sistemas Sênior</h3>
+                        <p>Liderança técnica na integração de ERPs e sistemas legados. Responsável por iniciar a cultura de automação interna do setor de tecnologia.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="timeline-item">
-                <span class="timeline-date">2016 - 2019</span>
-                <div class="timeline-content">
-                    <h3>Suporte de TI e Resolução de Problemas</h3>
-                    <p>Atendimento de nível 2 e 3. Aqui desenvolvi o "mindset" de troubleshooting, aprendendo a isolar a causa raiz dos problemas e resolvê-los de forma definitiva, habilidade essencial para debugar automações complexas hoje.</p>
+                <div class="timeline-item">
+                    <span class="timeline-date">2016 - 2019</span>
+                    <div class="timeline-content">
+                        <h3>Suporte e Infraestrutura de TI</h3>
+                        <p>Resolução de incidentes de alta complexidade. Desenvolvimento da base lógica para troubleshooting que hoje aplico na engenharia de software e automações.</p>
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </section>
 
-    <!-- FORMULÁRIO DE CONTATO VIA WEBHOOK -->
-    <section id="contato">
-        <h2 class="section-title" style="text-align: center; width: 100%;">Inicializar Contato</h2>
-        <div class="contact-container">
-            <form id="n8nContactForm">
-                <div class="form-group">
-                    <label for="name">Seu Nome / Empresa</label>
-                    <input type="text" id="name" name="name" class="form-control" required placeholder="Ex: John Doe">
+    <!-- CONTATO -->
+    <section class="contact-section" id="contato">
+        <div class="container">
+            <h2 class="section-title">Vamos Conversar</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Pronto para otimizar seu negócio?</h3>
+                    <p>Se você tem um processo manual repetitivo ou uma ideia de integração com Inteligência Artificial, me envie uma mensagem.</p>
+                    <p>📍 São Paulo, Brasil<br>
+                       ✉️ contato@seudominio.com<br>
+                       🔗 linkedin.com/in/seuperfil</p>
                 </div>
-                <div class="form-group">
-                    <label for="email">E-mail Corporativo</label>
-                    <input type="email" id="email" name="email" class="form-control" required placeholder="john@empresa.com">
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="nome" class="form-control" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-control" placeholder="Seu E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensagem" class="form-control" placeholder="Como posso ajudar você?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="message">Descreva o Gargalo Operacional</label>
-                    <textarea id="message" name="message" class="form-control" required placeholder="Qual processo manual está custando caro para sua empresa?"></textarea>
-                </div>
-                <button type="submit" class="btn submit-btn" id="submitBtn">Enviar Payload</button>
-            </form>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Clovis. Desenvolvido e automatizado com 💻 e IA.</p>
+        <p>&copy; 2026 Clovis. Desenvolvido com foco e energia.</p>
     </footer>
 
-    <!-- SCRIPT DE ENVIO PARA O WEBHOOK n8n -->
+    <!-- SCRIPT SIMPLES DE ALERTA PARA O FORMULÁRIO -->
     <script>
-        document.getElementById('n8nContactForm').addEventListener('submit', async function(e) {
-            e.preventDefault(); // Impede o reload da página
-
-            const btn = document.getElementById('submitBtn');
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aqui você pode integrar o webhook do n8n como feito na versão anterior
+            const btn = this.querySelector('button');
             const originalText = btn.innerText;
-            btn.innerText = 'Processando...';
-            btn.style.opacity = '0.7';
-            btn.disabled = true;
-
-            // PREENCHA ESTA VARIÁVEL COM A URL DO SEU WEBHOOK NO N8N
-            const webhookUrl = 'SUA_URL_DO_WEBHOOK_N8N_AQUI';
-
-            // Coletar dados do formulário
-            const payload = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value,
-                timestamp: new Date().toISOString()
-            };
-
-            try {
-                // Fazer a requisição POST para o Webhook do n8n
-                const response = await fetch(webhookUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(payload)
-                });
-
-                if (response.ok) {
-                    alert('Status 200: Mensagem recebida com sucesso! Em breve entrarei em contato.');
-                    this.reset(); // Limpar formulário
-                } else {
-                    alert('Erro no envio. Verifique o endpoint do webhook.');
-                }
-            } catch (error) {
-                console.error('Erro na requisição:', error);
-                alert('Falha na conexão. Você configurou a URL do Webhook do n8n no script HTML?');
-            } finally {
+            
+            btn.innerText = 'Enviando...';
+            
+            setTimeout(() => {
+                alert('Mensagem simulada com sucesso! Conecte seu Webhook no JavaScript para envios reais.');
                 btn.innerText = originalText;
-                btn.style.opacity = '1';
-                btn.disabled = false;
-            }
+                this.reset();
+            }, 1500);
         });
     </script>
 </body>
