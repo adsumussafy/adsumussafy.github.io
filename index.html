@@ -8,7 +8,7 @@
     <style>
         /* === VARIÁVEIS DE COR === */
         :root {
-            --orange: #FF6B00; /* Laranja vibrante */
+            --orange: #FF6B00; 
             --orange-hover: #e65c00;
             --black: #111111;
             --black-light: #1a1a1a;
@@ -150,7 +150,7 @@
             display: flex;
             align-items: center;
             position: relative;
-            padding-top: 80px; /* offset para a navbar */
+            padding-top: 80px;
         }
 
         .hero-content {
@@ -216,7 +216,7 @@
             z-index: -1;
         }
 
-        /* === PROJETOS === */
+        /* === PROJETOS (PORTFÓLIO DE TI) === */
         .projects-section {
             background-color: var(--gray-light);
         }
@@ -329,7 +329,15 @@
 
         .timeline-content h3 {
             color: var(--black);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
+            font-size: 1.5rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
         }
 
         .timeline-content p {
@@ -402,7 +410,7 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
             .about-grid, .contact-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; } /* Adicionar menu mobile futuramente */
+            .nav-links { display: none; }
             section { padding: 4rem 1rem; }
             .about-image { margin-top: 2rem; height: 300px; }
         }
@@ -416,7 +424,7 @@
             <div class="logo">Clovis<span>.</span></div>
             <nav class="nav-links">
                 <a href="#sobre">Sobre Mim</a>
-                <a href="#projetos">Projetos</a>
+                <a href="#projetos">Portfólio de TI</a>
                 <a href="#experiencia">Experiência</a>
                 <a href="#contato">Contato</a>
             </nav>
@@ -426,9 +434,9 @@
     <!-- HERO -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Soluções em <span>Automação</span> e Inteligência Artificial.</h1>
-            <p>Ajudando empresas a escalarem através de integrações inteligentes, eliminando tarefas manuais e otimizando processos com tecnologia de ponta.</p>
-            <a href="#projetos" class="btn">Ver meu trabalho</a>
+            <h1>Trabalho duro, <span>Automação</span> e Inteligência Artificial.</h1>
+            <p>Unindo a resiliência e a organização do setor operacional com habilidades avançadas em tecnologia para criar soluções escaláveis e eficientes.</p>
+            <a href="#experiencia" class="btn">Conheça minha trajetória</a>
         </div>
     </section>
 
@@ -438,9 +446,9 @@
             <h2 class="section-title">Sobre Mim</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Olá, sou o Clovis. Sou um especialista apaixonado por transformar problemas complexos em processos simples, automatizados e escaláveis.</p>
-                    <p>Com forte background em TI e desenvolvimento, foco meu trabalho na integração de sistemas (APIs, n8n, Webhooks) e na implementação de fluxos com Inteligência Artificial (OpenAI, Claude) para trazer resultados reais.</p>
-                    <p>Meu objetivo é devolver o recurso mais valioso para você e sua equipe: <strong>o tempo</strong>.</p>
+                    <p>Olá, sou o Clovis. Tenho um histórico de muito trabalho prático e dedicação, o que me ensinou resiliência, agilidade e como resolver problemas no dia a dia com eficiência.</p>
+                    <p>Atualmente, estou canalizando minha paixão por resolver problemas para a área de Tecnologia, com foco em <strong>Automação (n8n) e Inteligência Artificial</strong>. Acredito que a ética de trabalho que desenvolvi no chão de fábrica e no varejo é o meu maior diferencial na área de TI.</p>
+                    <p>Busco oportunidades onde eu possa aplicar minha garra operacional e meus conhecimentos técnicos para criar processos que poupem tempo e gerem resultados.</p>
                 </div>
                 <div class="about-image">
                     [Sua Foto de Perfil Aqui]
@@ -449,17 +457,17 @@
         </div>
     </section>
 
-    <!-- PROJETOS -->
+    <!-- PROJETOS DE ESTUDO/PORTFÓLIO -->
     <section class="projects-section" id="projetos">
         <div class="container">
-            <h2 class="section-title">Projetos em Destaque</h2>
+            <h2 class="section-title">Projetos de Automação</h2>
             <div class="projects-grid">
                 
                 <div class="card">
-                    <div class="card-img">[Print do Workflow]</div>
+                    <div class="card-img">[Print do Workflow n8n]</div>
                     <div class="card-body">
                         <h3>Triagem de Suporte com IA</h3>
-                        <p>Automação que analisa e-mails de clientes, identifica a urgência usando IA e direciona para o setor responsável via Slack.</p>
+                        <p>Desenvolvimento de automação no n8n que analisa e-mails, identifica a urgência usando IA e direciona para o setor responsável.</p>
                         <div class="tags">
                             <span class="tag">n8n</span>
                             <span class="tag">OpenAI</span>
@@ -468,25 +476,13 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-img">[Print do Dashboard]</div>
-                    <div class="card-body">
-                        <h3>Enriquecimento de Leads</h3>
-                        <p>Sistema que captura contatos de landing pages, busca informações públicas da empresa e atualiza o CRM automaticamente.</p>
-                        <div class="tags">
-                            <span class="tag">HubSpot API</span>
-                            <span class="tag">Web Scraping</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
                     <div class="card-img">[Print da Integração]</div>
                     <div class="card-body">
-                        <h3>Assistente de Vendas WhatsApp</h3>
-                        <p>Chatbot inteligente conectado ao banco de dados de produtos da empresa para responder dúvidas e gerar orçamentos.</p>
+                        <h3>Gestão de Estoque Automatizada</h3>
+                        <p>Criação de um fluxo que avisa automaticamente via WhatsApp ou Slack quando um produto atinge a quantidade mínima no sistema.</p>
                         <div class="tags">
-                            <span class="tag">WhatsApp API</span>
-                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Webhooks</span>
+                            <span class="tag">APIs</span>
                         </div>
                     </div>
                 </div>
@@ -495,33 +491,36 @@
         </div>
     </section>
 
-    <!-- EXPERIÊNCIA -->
+    <!-- EXPERIÊNCIA (AGORA COM SEUS DADOS REAIS) -->
     <section class="experience-section" id="experiencia">
         <div class="container">
-            <h2 class="section-title">Trajetória</h2>
+            <h2 class="section-title">Histórico Profissional</h2>
             <div class="timeline">
                 
                 <div class="timeline-item">
-                    <span class="timeline-date">2022 - Atual</span>
+                    <span class="timeline-date">Fev/2025 – Atual</span>
                     <div class="timeline-content">
-                        <h3>Consultor em Automação e IA</h3>
-                        <p>Atuando de forma independente, planejando e executando infraestruturas de automação para médias empresas. Redução média de 40% no tempo operacional dos clientes.</p>
+                        <h3>Repositor</h3>
+                        <h4>Supermercados Cavicchiolli Ltda.</h4>
+                        <p>Responsável pela organização estratégica de gôndolas, precificação e abastecimento de produtos. Atuação rigorosa no controle de validade (método FIFO) e excelência no atendimento direto ao cliente, garantindo a eficiência do ambiente de loja.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <span class="timeline-date">2019 - 2022</span>
+                    <span class="timeline-date">Jun/2024 – Fev/2025</span>
                     <div class="timeline-content">
-                        <h3>Analista de Sistemas Sênior</h3>
-                        <p>Liderança técnica na integração de ERPs e sistemas legados. Responsável por iniciar a cultura de automação interna do setor de tecnologia.</p>
+                        <h3>Auxiliar de Serviços Gerais</h3>
+                        <h4>Mercado Vitória</h4>
+                        <p>Manutenção da limpeza e organização geral do estabelecimento. Suporte direto na recepção de fornecedores, alocação de mercadorias no estoque e auxílio dinâmico nas demandas operacionais diárias do mercado.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <span class="timeline-date">2016 - 2019</span>
+                    <span class="timeline-date">Março/2024 – Maio/2024</span>
                     <div class="timeline-content">
-                        <h3>Suporte e Infraestrutura de TI</h3>
-                        <p>Resolução de incidentes de alta complexidade. Desenvolvimento da base lógica para troubleshooting que hoje aplico na engenharia de software e automações.</p>
+                        <h3>Auxiliar de Serviços Gerais</h3>
+                        <h4>Empresa de Mármores</h4>
+                        <p>Auxílio na movimentação de materiais pesados e pedras, organização do pátio de produção e suporte aos marmoristas. Trabalho focado em segurança, agilidade e limpeza do ambiente de produção (pós-obra).</p>
                     </div>
                 </div>
 
@@ -535,23 +534,23 @@
             <h2 class="section-title">Vamos Conversar</h2>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h3>Pronto para otimizar seu negócio?</h3>
-                    <p>Se você tem um processo manual repetitivo ou uma ideia de integração com Inteligência Artificial, me envie uma mensagem.</p>
-                    <p>📍 São Paulo, Brasil<br>
-                       ✉️ contato@seudominio.com<br>
-                       🔗 linkedin.com/in/seuperfil</p>
+                    <h3>Pronto para novos desafios</h3>
+                    <p>Seja para vagas operacionais onde a dedicação é essencial, ou para oportunidades iniciais em TI e Automação, estou pronto para somar à sua equipe.</p>
+                    <p>📍 Sua Cidade, Estado<br>
+                       ✉️ seu.email@exemplo.com<br>
+                       📱 (XX) XXXXX-XXXX</p>
                 </div>
                 
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" id="nome" class="form-control" placeholder="Seu Nome" required>
+                            <input type="text" id="nome" class="form-control" placeholder="Seu Nome / Empresa" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" class="form-control" placeholder="Seu E-mail" required>
+                            <input type="email" id="email" class="form-control" placeholder="E-mail de Contato" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="mensagem" class="form-control" placeholder="Como posso ajudar você?" required></textarea>
+                            <textarea id="mensagem" class="form-control" placeholder="Escreva sua mensagem aqui..." required></textarea>
                         </div>
                         <button type="submit" class="btn">Enviar Mensagem</button>
                     </form>
@@ -562,22 +561,21 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Clovis. Desenvolvido com foco e energia.</p>
+        <p>&copy; 2026 Clovis. Construindo o futuro com muito trabalho.</p>
     </footer>
 
-    <!-- SCRIPT SIMPLES DE ALERTA PARA O FORMULÁRIO -->
+    <!-- SCRIPT DE ENVIO DO FORMULÁRIO -->
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Aqui você pode integrar o webhook do n8n como feito na versão anterior
             const btn = this.querySelector('button');
             const originalText = btn.innerText;
             
             btn.innerText = 'Enviando...';
             
             setTimeout(() => {
-                alert('Mensagem simulada com sucesso! Conecte seu Webhook no JavaScript para envios reais.');
+                alert('Mensagem enviada com sucesso! Em breve entrarei em contato.');
                 btn.innerText = originalText;
                 this.reset();
             }, 1500);
